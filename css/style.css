@@ -1,0 +1,946 @@
+@font-face {
+    font-family: 'roboto';
+    src: url('fonts/roboto/Roboto-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: roboto;
+    font-size: 16px;
+    width: 100%;
+    background-color: rgb(253, 246, 251);
+    line-height: 1.4em;
+}
+
+.description {
+    width: 45%;
+    color: #585858;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
+
+.description::after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+    padding-bottom: 30px;
+    border-bottom: 2px solid rgba(148, 216, 243, 0.5);
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+header {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 99;
+}
+
+header h1 a {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 600;
+    color: rgb(253, 246, 251);
+}
+
+header h1 a:hover {
+    text-decoration: none;
+    color: blue;
+}
+
+header nav {
+    text-align: right;
+    margin-top: 30px;
+    float: right;
+    width: 50%;
+}
+
+header nav li {
+    display: inline;
+    margin-right: 30px;
+}
+
+header li a {
+    text-transform: uppercase;
+    color: rgb(253, 246, 251);
+}
+
+header li a:hover {
+    text-decoration: none;
+    color: blue;
+}
+
+#slider {
+    overflow: hidden;
+}
+
+#slider .carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+#about-us {
+    height: auto;
+    padding: 70px 0 50px 0;
+    background-color: white;
+}
+
+#about-us h1 {
+    margin-top: 70px;
+    color: #585858;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+#about-us p {
+    margin-top: 16px;
+    color: #585858;
+}
+
+#about-us button {
+    width: 200px;
+    height: 50px;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, rgba(148, 216, 243, 0.5), blue);
+    background: -moz-linear-gradient(bottom, rgba(148, 216, 243, 0.5), blue);
+    background: -webkit-linear-gradient(bottom, rgba(148, 216, 243, 0.5), blue);
+    background: -o-linear-gradient(bottom, rgba(148, 216, 243, 0.5), blue);
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+#post {
+    height: auto;
+    padding: 50px 0 50px 0;
+    text-align: center;
+    width: 100%;
+}
+
+#post .card {
+    display: inline-block;
+    width: 30%;
+    margin: 0 10px 30px 10px;
+    padding: 6px 10px 20px 10px;
+}
+
+#post .card:hover {
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(148, 216, 243, 0.5);
+}
+
+#post .card img {
+    width: 100%;
+    height: 30%;
+}
+
+#post .card .infor {
+    margin-left: 10px;
+    text-align: left;
+}
+
+#post .card .infor h1 {
+    color: #585858;
+    font-size: 34px;
+    text-transform: capitalize;
+}
+
+#post .card .infor p {
+    margin-top: 16px;
+    color: #585858;
+}
+
+#post .card .infor a {
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+#photo {
+    height: auto;
+    padding: 50px 0 70px 0;
+    text-align: center;
+    background-color: white;
+}
+
+#photo h1 {
+    color: #585858;
+}
+
+#photo .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+#photo .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+#photo .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+@media (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+#blog {
+    height: auto;
+    padding: 50px 0 50px 0;
+    text-align: center;
+}
+
+#blog .box {
+    display: inline-table;
+    width: 30%;
+    padding: 10px 0 20px 0;
+    margin: 0 15px 0 15px;
+}
+
+#blog .box:hover {
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px rgba(148, 216, 243, 0.5);
+}
+
+#blog .box img {
+    width: 160px;
+    height: 160px;
+    border-radius: 100px;
+}
+
+#blog .infor {
+    margin-top: 30px;
+}
+
+#blog .infor h1 {
+    color: #585858;
+    font-size: 36px;
+    text-transform: capitalize;
+}
+
+#blog .infor h2 {
+    color: #585858;
+    font-size: 22px;
+    text-transform: capitalize;
+}
+
+#blog .infor a {
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+footer {
+    background-color: rgb(48, 37, 45);
+    height: auto;
+    padding: 30px 0 10px 0;
+}
+
+footer h1 {
+    text-transform: uppercase;
+    font-size: 50px;
+    color: rgb(253, 246, 251);
+}
+
+footer i {
+    color: #585858;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+footer h1:hover {
+    color: blue;
+}
+
+footer .above-right {
+    display: inline-table;
+    width: 20%;
+    text-align: center;
+    margin: 0 15px 0 15px;
+}
+
+footer .above-right h1 {
+    text-transform: capitalize;
+    font-size: 30px;
+    color: rgb(253, 246, 251);
+}
+
+footer .above-right h1:hover {
+    color: blue;
+}
+
+footer .above-right nav li {
+    display: block;
+}
+
+footer .above-right nav li a {
+    text-decoration: none;
+    line-height: 1.8em;
+    text-transform: uppercase;
+    color: #585858;
+}
+
+footer .above-right nav li a:hover {
+    color: blue;
+}
+
+footer .under-footer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+footer .under-footer nav li {
+    display: inline;
+    margin: 0 10px 0 10px;
+}
+
+footer .under-footer nav li i {
+    font-size: 24px;
+}
+
+footer .under-footer nav li i:hover {
+    color: rgb(253, 246, 251)
+}
+
+footer .under-footer a {
+    text-decoration: none;
+}
+
+/* about page */
+
+#our-history {
+    background-color: white;
+    height: auto;
+    padding: 50px 0 50px 0;
+    text-align: center;
+}
+
+#our-history h1 {
+    color: #585858;
+}
+
+#our-history .timeline {
+    width: 500px;
+    margin: auto;
+}
+
+#our-history .timeline p {
+    border-top: 2px dashed;
+    border-color: blue !important;
+    margin: 0;
+    padding: 30px;
+}
+
+#our-history .timeline p:nth-child(even) {
+    border-left: 2px dashed;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin-right: 30px;
+    padding-right: 0;
+}
+
+#our-history .timeline p:nth-child(odd) {
+    border-right: 2px dashed;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-left: 30px;
+    padding-left: 0;
+}
+
+#our-history .timeline p:first-child {
+    border-top: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+#our-history .timeline p:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#our-team {
+    height: auto;
+    text-align: center;
+    padding: 50px 0 50px 0;
+}
+
+#our-team .box {
+    display: inline-table;
+    width: 20%;
+    margin-right: 20px;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+#our-team .box:hover {
+    box-shadow: 1px 1px 1px 1px rgba(148, 216, 243, 0.5);
+    transition: 0.5s ease-in-out;
+    border-radius: 5px;
+}
+
+#our-team .box img {
+    height: 80px;
+    border-radius: 50px;
+    width: 80px;
+}
+
+#our-team .box h1 {
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+#our-team .box h2 {
+    margin-top: 6px;
+    font-size: 16px;
+    color: #585858;
+}
+
+#our-team .box p {
+    margin-top: 15px;
+    text-align: center;
+    width: 80%;
+    margin-left: 28px;
+}
+
+/* contact page */
+
+#contact {
+    height: auto;
+    padding: 70px 0 70px 0;
+}
+
+#contact h1 {
+    font-size: 40px;
+    color: #585858;
+    text-transform: capitalize;
+}
+
+#contact input {
+    margin-top: 20px;
+}
+
+#contact textarea {
+    margin-top: 20px;
+}
+
+#contact button {
+    width: 160px;
+    height: 50px;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, rgba(148, 216, 243, 0.5), blue);
+    background: -moz-linear-gradient(bottom, rgba(148, 216, 243, 0.5), blue);
+    background: -webkit-linear-gradient(bottom, rgba(148, 216, 243, 0.5), blue);
+    background: -o-linear-gradient(bottom, rgba(148, 216, 243, 0.5), blue);
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+#contact img {
+    margin-left: 30px;
+    width: 70%;
+    height: 100%;
+}
+
+#map {
+    height: 500px;
+    background: url('../images/map.png') no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#map .form {
+    background-color: rgb(253, 246, 251);
+    width: 28%;
+    height: auto;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    position: absolute;
+    left: 35%;
+}
+
+#map .form h1 {
+    font-size: 20px;
+}
+
+#map .form p {
+    margin-top: 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#map .form a {
+    color: #585858;
+    font-size: 12px;
+}
+
+#map .form button {
+    position: absolute;
+    top: 75%;
+    left: 75%;
+    color: blue;
+    background-color: #ffffff;
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+/* login page */
+
+#wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    background: url('../images/login.jpg') no-repeat;
+    background-size: cover;
+    height: 667px;
+    padding: 100px;
+    text-align: center;
+}
+
+.content h1 {
+    color: blue;
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.content input[type=text], input[type=password] {
+    margin-top: 40px;
+    height: 50px;
+}
+
+.content label {
+    font-weight: 50;
+    float: left;
+}
+
+.content span {
+    float: right;
+}
+
+.content button {
+    width: 420px;
+    height: 50px;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, rgba(148, 216, 243, 0.5), blue);
+    background: -moz-linear-gradient(bottom, rgba(148, 216, 243, 0.5), blue);
+    background: -webkit-linear-gradient(bottom, rgba(148, 216, 243, 0.5), blue);
+    background: -o-linear-gradient(bottom, rgba(148, 216, 243, 0.5), blue);
+    border-radius: 5px;
+    margin-top: 40px;
+}
+
+.register {
+    height: 667px;
+    padding: 50px;
+    text-align: center;
+}
+
+.register label {
+    font-weight: 50;
+    float: left;
+}
+
+.register input[type=text], input[type=password] {
+    margin-top: 40px;
+    height: 50px;
+}
+
+.register button {
+    width: 100px;
+    height: 50px;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, rgba(63, 67, 68, 0.5), rgb(10, 10, 10));
+    background: -moz-linear-gradient(bottom, rgba(63, 67, 68, 0.5), rgb(10, 10, 10));
+    background: -webkit-linear-gradient(bottom, rgba(63, 67, 68, 0.5), rgb(10, 10, 10));
+    background: -o-linear-gradient(bottom, rgba(63, 67, 68, 0.5), rgb(10, 10, 10));
+    border-radius: 5px;
+    margin-top: 40px;
+}
+
+/* post page */
+
+#post-post {
+    height: auto;
+    padding: 50px 0 50px 0;
+    text-align: center;
+    width: 100%;
+    background: white;
+}
+
+#post-post .card {
+    display: inline-block;
+    width: 70%;
+    margin: 0 10px 30px 10px;
+    padding: 6px 10px 20px 10px;
+    background: rgb(253, 246, 251);
+}
+
+#post-post .card:hover {
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(148, 216, 243, 0.5);
+}
+
+#post-post .card img {
+    width: 100%;
+    height: 30%;
+}
+
+#post-post .card .infor {
+    margin-left: 10px;
+    text-align: left;
+}
+
+#post-post .card .infor h1 {
+    color: #585858;
+    font-size: 34px;
+    text-transform: capitalize;
+}
+
+#post-post .card .infor p {
+    margin-top: 16px;
+    color: #585858;
+}
+
+#post-post .card .infor a {
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+#post-post .well {
+    text-align: left;
+}
+
+#post-post .well button {
+    width: 80px;
+    height: 40px;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, rgba(148, 216, 243, 0.5), blue);
+    background: -moz-linear-gradient(bottom, rgba(148, 216, 243, 0.5), blue);
+    background: -webkit-linear-gradient(bottom, rgba(148, 216, 243, 0.5), blue);
+    background: -o-linear-gradient(bottom, rgba(148, 216, 243, 0.5), blue);
+    border-radius: 5px;
+}
+
+#post-post .media {
+    text-align: left;
+}
+
+#type-post {
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(to bottom, rgba(148, 216, 243, 0.5), blue);
+    background: -moz-linear-gradient(bottom, rgba(148, 216, 243, 0.5), blue);
+    background: -webkit-linear-gradient(bottom, rgba(148, 216, 243, 0.5), blue);
+    background: -o-linear-gradient(bottom, rgba(148, 216, 243, 0.5), blue);
+}
+
+#type-post nav {
+    margin-top: 30px;
+}
+
+#type-post nav li {
+    display: inline;
+    margin-right: 100px;
+}
+
+#type-post li a {
+    text-transform: uppercase;
+    color: rgb(253, 246, 251);
+    font-weight: 600;
+}
+
+#type-post li a:hover {
+    text-decoration: none;
+    color: blue;
+}
+
+#create-post {
+    height: auto;
+    padding: 50px 0 50px 0;
+}
+
+#create-post input[type=text] {
+    height: 50px;
+}
+
+#create-post textarea {
+    height: 200px;
+}
+
+#create-post a {
+    text-decoration: none;
+    color: #585858;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#create-post label {
+    color: #585858;
+    text-transform: uppercase;
+}
+#create-post .image h4{
+    font-weight: 600;
+    color: #585858;
+    text-transform: uppercase;
+}
+#create-post button {
+    float: right;
+    margin-top: 30px;
+    width: 140px;
+    height: 50px;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, rgba(148, 216, 243, 0.5), blue);
+    background: -moz-linear-gradient(bottom, rgba(148, 216, 243, 0.5), blue);
+    background: -webkit-linear-gradient(bottom, rgba(148, 216, 243, 0.5), blue);
+    background: -o-linear-gradient(bottom, rgba(148, 216, 243, 0.5), blue);
+    border-radius: 5px;
+}
+
+/* blog page */
+
+#timeline-blog .timeline {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 1em 0;
+    list-style-type: none;
+}
+
+#timeline-blog .timeline:before {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    content: ' ';
+    display: block;
+    width: 6px;
+    height: 100%;
+    margin-left: -3px;
+    background: rgb(80, 80, 80);
+    background: -moz-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+    background: -webkit-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+    background: -o-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+    background: -ms-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+    background: linear-gradient(to bottom, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+    z-index: 5;
+}
+
+#timeline-blog .timeline li {
+    padding: 1em 0;
+}
+
+#timeline-blog .timeline li:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#timeline-blog .direction-l {
+    position: relative;
+    float: left;
+    text-align: right;
+}
+
+#timeline-blog .direction-r {
+    position: relative;
+    float: right;
+}
+
+#timeline-blog .card {
+    margin: 0 10px 30px 10px;
+    padding: 6px 10px 20px 10px;
+}
+
+#timeline-blog .card:hover {
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(148, 216, 243, 0.5);
+}
+
+#timeline-blog .card img {
+    width: 100%;
+    height: 30%;
+}
+
+#timeline-blog .card .infor {
+    margin-left: 10px;
+    text-align: left;
+}
+
+#timeline-blog .card .infor h1 {
+    color: #585858;
+    font-size: 34px;
+    text-transform: capitalize;
+}
+
+#timeline-blog .card .infor p {
+    margin-top: 16px;
+    color: #585858;
+}
+
+#timeline-blog .card .infor a {
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+/* detailpost page */
+
+main {
+    height: auto;
+    padding: 70px 0 70px 0;
+}
+
+main img {
+    width: 100%;
+}
+
+main .well {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+main .well button {
+    width: 80px;
+    height: 40px;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, rgba(148, 216, 243, 0.5), blue);
+    background: -moz-linear-gradient(bottom, rgba(148, 216, 243, 0.5), blue);
+    background: -webkit-linear-gradient(bottom, rgba(148, 216, 243, 0.5), blue);
+    background: -o-linear-gradient(bottom, rgba(148, 216, 243, 0.5), blue);
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .description {
+        width: 100%;
+    }
+    header {
+        text-align: center;
+        width: 100%;
+    }
+    header nav {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    header nav li {
+        display: inline;
+    }
+    header li a {
+        text-transform: uppercase;
+        color: blue;
+        text-decoration: none;
+    }
+    #slider h3 {
+        opacity: 0;
+    }
+    #slider p {
+        opacity: 0;
+    }
+    #about-us {
+        text-align: center;
+    }
+    #post .card {
+        display: inline-block;
+        width: 80%;
+        margin: 0 10px 30px 10px;
+        padding: 6px 10px 20px 10px;
+    }
+    footer {
+        text-align: center;
+    }
+    /* post */
+    #create-post {
+        text-align: center;
+    }
+    #create-post button {
+        float: unset;
+    }
+    #post-post .card {
+        width: 90%;
+    }
+    #type-post nav {
+        margin-top: 12px;
+    }
+    #type-post nav li {
+        display: inline;
+        margin-right: 10px;
+    }
+    /* blog */
+    #timeline-blog .timeline:before {
+        opacity: 0;
+    }
+    /* contact */
+    #contact {
+        text-align: center;
+        height: auto;
+        padding: 10px 0 10px 0;
+    }
+    #contact img {
+        opacity: 0;
+    }
+    #map {
+        height: 500px;
+        background: url('../images/map.png') no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    #map .form {
+        background-color: rgb(253, 246, 251);
+        width: 58%;
+        height: auto;
+        border-radius: 5px;
+        padding: 5px;
+        margin-top: 5px;
+        position: absolute;
+        left: 25%;
+    }
+    /* about */
+    #our-history .timeline {
+        width: 250px;
+        margin: auto;
+    }
+    #our-team .box {
+        display: inline-table;
+        width: 90%;
+        margin-right: 20px;
+        margin-top: 50px;
+        padding: 10px;
+    }
+    /* login */
+
+    .content {
+        height: auto;
+        text-align: center;
+
+    }
+    .content button {
+        width: 100px;
+    }
+}
